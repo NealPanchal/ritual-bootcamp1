@@ -34,13 +34,11 @@ export default function Home() {
       {/* Top nav */}
       <header className="sticky top-0 z-10 border-b border-white/10 bg-zinc-950/70 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-          <div className="flex items-center gap-2">
-            <div className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-indigo-500 to-emerald-400 text-sm font-bold text-zinc-950">
-              AI
-            </div>
-            <div>
+          <div className="flex items-center gap-3">
+            <img src="/lockup.svg" alt="Ritual Logo" className="h-6" />
+            <div className="border-l border-white/20 pl-3">
               <h1 className="text-sm font-semibold leading-tight">AI Bounty Judge</h1>
-              <p className="text-[11px] leading-tight text-zinc-500">on {ritualChain.name}</p>
+              <p className="text-[11px] leading-tight text-zinc-400">on {ritualChain.name}</p>
             </div>
           </div>
           <WalletConnect />

@@ -57,14 +57,15 @@ export function CardBody({
 
 /* ----------------------------------------------------------------- Badge */
 
-type Tone = "green" | "amber" | "indigo" | "zinc" | "red";
+type Tone = "green" | "amber" | "indigo" | "zinc" | "red" | "violet";
 
 const TONES: Record<Tone, string> = {
-  green: "bg-emerald-500/15 text-emerald-300 ring-emerald-500/30",
-  amber: "bg-amber-500/15 text-amber-300 ring-amber-500/30",
+  green:  "bg-emerald-500/15 text-emerald-300 ring-emerald-500/30",
+  amber:  "bg-amber-500/15 text-amber-300 ring-amber-500/30",
   indigo: "bg-indigo-500/15 text-indigo-300 ring-indigo-500/30",
-  zinc: "bg-zinc-500/15 text-zinc-300 ring-zinc-500/30",
-  red: "bg-red-500/15 text-red-300 ring-red-500/30",
+  zinc:   "bg-zinc-500/15 text-zinc-300 ring-zinc-500/30",
+  red:    "bg-red-500/15 text-red-300 ring-red-500/30",
+  violet: "bg-violet-500/15 text-violet-300 ring-violet-500/30",
 };
 
 export function Badge({

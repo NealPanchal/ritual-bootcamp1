@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   useAccount,
   useConnect,
@@ -19,8 +19,14 @@ export function WalletConnect() {
   const chainId = useChainId();
   const { switchChain } = useSwitchChain();
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   const wrongChain = isConnected && chainId !== ritualChain.id;
+
+  if (!mounted) return <div className="h-9" />; // Placeholder to prevent layout shift
+
 
   if (isConnected && address) {
     return (
